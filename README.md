@@ -1,5 +1,5 @@
 # MZD-THEMES
-Themes for Mazda Connect systems.
+Themes for Mazda Connect systems, go check out the branches ^^ to see what we got.
 
 Use MZD-AIO-TI to install these themes with the following tweaks:
 - Background Image: Pick "Single Img" and find the _background.png_
