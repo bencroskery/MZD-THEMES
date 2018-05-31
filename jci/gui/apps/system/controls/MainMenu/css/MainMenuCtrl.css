@@ -44,10 +44,9 @@
   animation-fill-mode: forwards; }
 
 @keyframes mainMenuCtrlCoinAExplode {
+  0% { }
   100% {
     -o-transform: scale(5, 5);
-    left: 344px;
-    top: 148px;
     z-index: 1; } }
 
 .MainMenuCtrlCoinBExplode {
@@ -57,10 +56,9 @@
   animation-fill-mode: forwards; }
 
 @keyframes mainMenuCtrlCoinBExplode {
+  0% { }
   100% {
     -o-transform: scale(4, 4);
-    left: 330px;
-    top: 133px;
     z-index: 1; } }
 
 .MainMenuCtrlHighlightExplode {
@@ -70,242 +68,219 @@
   animation-fill-mode: forwards; }
 
 @keyframes mainMenuCtrlHighlightExplode {
+  0% { }
   100% {
     -o-transform: scale(2.5, 2.5);
-    left: 219.5px;
-    top: -18px; } }
+    left: 159.5px;
+    top: 59px; } }
 
 .MainMenuCtrlAppDiv {
   position: absolute;
-  left: -35px;
-  top: 272px;
-  width: 114px;
-  height: 122px;
+  left: 130px;
+  top: 56px;
+  width: 120px;
+  height: 120px;
   -o-transition: 0.2s linear; }
 
-.MainMenuCtrlAppNormal {
+/*.MainMenuCtrlAppNormal {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 114px;
-  height: 122px;
+  width: $coinAWidth;
+  height: $coinAHeight;
   background: url(../images/coins/HomeApps.png);
   background-repeat: no-repeat;
-  -o-transition: opacity 0.2s linear; }
-
+  -o-transition: opacity 0.2s linear; 
+}*/
 .MainMenuCtrlAppFocus {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 114px;
-  height: 122px;
+  left: -111px;
+  top: -50px;
+  width: 434px;
+  height: 224px;
   background: url(../images/coins/HomeApps_Focus.png);
   background-repeat: no-repeat;
-  background-size: 100%; }
+  background-size: 100%;
+  opacity: 0;
+  -o-transition: opacity 0.2s linear; }
 
-.MainMenuCtrlAppDiv.MainMenuCtrlCoinFocus {
-  -o-transform: scale(1.2, 1.2) translate(36px, -33px); }
-
-div.MainMenuCtrlCoinFocus .MainMenuCtrlAppNormal {
-  opacity: 0; }
+div.MainMenuCtrlCoinFocus .MainMenuCtrlAppFocus {
+  opacity: 1; }
 
 .MainMenuCtrlEntDiv {
   position: absolute;
-  left: 105px;
-  top: 164px;
-  width: 142px;
-  height: 152px;
+  left: 215px;
+  top: 26px;
+  width: 120px;
+  height: 120px;
   -o-transition: 0.2s linear; }
 
-.MainMenuCtrlEntNormal {
+/*.MainMenuCtrlEntNormal {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 142px;
-  height: 152px;
+  width: $coinAWidth;
+  height: $coinAHeight;
   background: url(../images/coins/HomeAudio.png);
   background-repeat: no-repeat;
-  -o-transition: opacity 0.2s linear; }
-
+  -o-transition: opacity 0.2s linear; 
+}*/
 .MainMenuCtrlEntFocus {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 142px;
-  height: 152px;
+  left: -178px;
+  top: -32px;
+  width: 503px;
+  height: 202px;
   background: url(../images/coins/HomeAudio_Focus.png);
   background-repeat: no-repeat;
-  background-size: 100%; }
+  background-size: 100%;
+  opacity: 0;
+  -o-transition: opacity 0.2s linear; }
 
-.MainMenuCtrlEntDiv.MainMenuCtrlCoinFocus {
-  -o-transform: scale(1.2, 1.2) translate(0px, -10px); }
-
-div.MainMenuCtrlCoinFocus .MainMenuCtrlEntNormal {
-  opacity: 0; }
+div.MainMenuCtrlCoinFocus .MainMenuCtrlEntFocus {
+  opacity: 1; }
 
 .MainMenuCtrlComDiv {
   position: absolute;
-  left: 330px;
-  top: 133px;
+  left: 270px;
+  top: 146px;
   width: 142px;
   height: 152px;
   -o-transition: 0.2s linear; }
 
-.MainMenuCtrlComNormal {
+/*.MainMenuCtrlComNormal {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 142px;
-  height: 152px;
+  width: $coinBWidth;
+  height: $coinBHeight;
   background: url(../images/coins/HomeCom.png);
   background-repeat: no-repeat;
-  -o-transition: opacity 0.2s linear; }
-
+  -o-transition: opacity 0.2s linear; 
+}*/
 .MainMenuCtrlComFocus {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 142px;
-  height: 152px;
+  left: -243px;
+  top: -87px;
+  width: 631px;
+  height: 307px;
   background: url(../images/coins/HomeCom_Focus.png);
   background-repeat: no-repeat;
-  background-size: 100%; }
+  background-size: 100%;
+  opacity: 0;
+  -o-transition: opacity 0.2s linear; }
 
-.MainMenuCtrlComDiv.MainMenuCtrlCoinFocus {
-  -o-transform: scale(1.2, 1.2) translate(0px, -10px); }
-
-div.MainMenuCtrlCoinFocus .MainMenuCtrlComNormal {
-  opacity: 0; }
+div.MainMenuCtrlCoinFocus .MainMenuCtrlComFocus {
+  opacity: 1; }
 
 .MainMenuCtrlNavDiv {
   position: absolute;
-  left: 549px;
-  top: 164px;
-  width: 142px;
-  height: 152px;
+  left: 360px;
+  top: 16px;
+  width: 120px;
+  height: 120px;
   -o-transition: 0.2s linear; }
 
-.MainMenuCtrlNavNormal {
+/*.MainMenuCtrlNavNormal {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 142px;
-  height: 152px;
+  width: $coinAWidth;
+  height: $coinAHeight;
   background: url(../images/coins/HomeNav.png);
   background-repeat: no-repeat;
-  -o-transition: opacity 0.2s linear; }
-
+  -o-transition: opacity 0.2s linear; 
+}*/
 .MainMenuCtrlNavFocus {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 142px;
-  height: 152px;
+  left: -195px;
+  top: -37px;
+  width: 532px;
+  height: 225px;
   background: url(../images/coins/HomeNav_Focus.png);
   background-repeat: no-repeat;
-  background-size: 100%; }
+  background-size: 100%;
+  opacity: 0;
+  -o-transition: opacity 0.2s linear; }
 
-.MainMenuCtrlNavDiv.MainMenuCtrlCoinFocus {
-  -o-transform: scale(1.2, 1.2) translate(0px, -10px); }
-
-div.MainMenuCtrlCoinFocus .MainMenuCtrlNavNormal {
-  opacity: 0; }
+div.MainMenuCtrlCoinFocus .MainMenuCtrlNavFocus {
+  opacity: 1; }
 
 .MainMenuCtrlSetDiv {
   position: absolute;
-  left: 721px;
-  top: 272px;
-  width: 114px;
-  height: 122px;
+  left: 480px;
+  top: 46px;
+  width: 120px;
+  height: 120px;
   -o-transition: 0.2s linear; }
 
-.MainMenuCtrlSetNormal {
+/*.MainMenuCtrlSetNormal {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: 114px;
-  height: 122px;
+  width: $coinAWidth;
+  height: $coinAHeight;
   background: url(../images/coins/HomeSet.png);
   background-repeat: no-repeat;
-  -o-transition: opacity 0.2s linear; }
-
+  -o-transition: opacity 0.2s linear; 
+}*/
 .MainMenuCtrlSetFocus {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 114px;
-  height: 122px;
+  left: -186px;
+  top: -26px;
+  width: 491px;
+  height: 182px;
   background: url(../images/coins/HomeSet_Focus.png);
   background-repeat: no-repeat;
-  background-size: 100%; }
+  background-size: 100%;
+  opacity: 0;
+  -o-transition: opacity 0.2s linear; }
 
-.MainMenuCtrlSetDiv.MainMenuCtrlCoinFocus {
-  -o-transform: scale(1.2, 1.2) translate(-36px, -33px); }
+div.MainMenuCtrlCoinFocus .MainMenuCtrlSetFocus {
+  opacity: 1; }
 
-div.MainMenuCtrlCoinFocus .MainMenuCtrlSetNormal {
-  opacity: 0; }
+/*
+@mixin highlightCommon {
+  opacity: 0;
+  -o-transition: opacity 200ms linear;
+  width: $glowWidth;
+  height: $glowHeight;
+  background: url(../images/highlights/Glow.png);
+  background-repeat: no-repeat;
+  position: absolute;
+
+  &.Visible {
+    opacity: 1;
+  }
+}
 
 .MainMenuCtrlAppHighlight {
-  opacity: 0;
-  -o-transition: opacity 200ms linear;
-  width: 363px;
-  height: 323px;
-  background: url(../images/highlights/Glow.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  left: -123.5px;
-  top: 68px; }
-  .MainMenuCtrlAppHighlight.Visible {
-    opacity: 1; }
+  @include highlightCommon;
+  left: $appLeft + $coinAFocusTranslateX + $coinAWidth / 2 - $glowWidth / 2;
+  top: $appTop + $coinAFocusTranslateY + $coinAHeight - $glowHeight + $glowBottomOffset;
+}
 
 .MainMenuCtrlEntHighlight {
-  opacity: 0;
-  -o-transition: opacity 200ms linear;
-  width: 363px;
-  height: 323px;
-  background: url(../images/highlights/Glow.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  left: -5.5px;
-  top: 13px; }
-  .MainMenuCtrlEntHighlight.Visible {
-    opacity: 1; }
+  @include highlightCommon;
+  left: $entLeft + $coinBWidth / 2 + $coinBFocusTranslateX - $glowWidth / 2;
+  top: $entTop + $coinBFocusTranslateY + $coinBHeight - $glowHeight + $glowBottomOffset;
+}
 
 .MainMenuCtrlComHighlight {
-  opacity: 0;
-  -o-transition: opacity 200ms linear;
-  width: 363px;
-  height: 323px;
-  background: url(../images/highlights/Glow.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 219.5px;
-  top: -18px; }
-  .MainMenuCtrlComHighlight.Visible {
-    opacity: 1; }
+  @include highlightCommon;
+  left: $comLeft + $coinBWidth / 2 + $coinBFocusTranslateX - $glowWidth / 2;
+  top: $comTop + $coinBFocusTranslateY + $coinBHeight - $glowHeight + $glowBottomOffset;
+}
 
 .MainMenuCtrlNavHighlight {
-  opacity: 0;
-  -o-transition: opacity 200ms linear;
-  width: 363px;
-  height: 323px;
-  background: url(../images/highlights/Glow.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 438.5px;
-  top: 13px; }
-  .MainMenuCtrlNavHighlight.Visible {
-    opacity: 1; }
+  @include highlightCommon;
+  left: $navLeft + $coinBWidth / 2 + $coinBFocusTranslateX - $glowWidth / 2;
+  top: $navTop + $coinBFocusTranslateY + $coinBHeight - $glowHeight + $glowBottomOffset;
+}
 
 .MainMenuCtrlSetHighlight {
-  opacity: 0;
-  -o-transition: opacity 200ms linear;
-  width: 363px;
-  height: 323px;
-  background: url(../images/highlights/Glow.png);
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 560.5px;
-  top: 68px; }
-  .MainMenuCtrlSetHighlight.Visible {
-    opacity: 1; }
+  @include highlightCommon;
+  left: $setLeft + $coinAWidth / 2 - $coinAFocusTranslateX - $glowWidth / 2;
+  top: $setTop + $coinAFocusTranslateY + $coinAHeight - $glowHeight + $glowBottomOffset;
+}
+*/

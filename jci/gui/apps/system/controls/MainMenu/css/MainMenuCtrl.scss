@@ -1,8 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import "commonVariables";
-
 .MainMenuCtrl {
   position: absolute;
   left: 0px;
@@ -36,9 +34,9 @@
 
 	text-align: center;
   line-height: 51px;
-  font-family: $common-fontFamily;
-	font-size: $common-fontSizeA;
-	color: $common-normalTextColor;
+  font-family: "Tipperary", Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  color: white;
 
   opacity: 0;
   -o-transition: opacity 200ms linear;
@@ -48,22 +46,23 @@
   }
 }
 
+$statusMargin: 64px;
+
 // Positions of each coin
-$appLeft: -35px;
-$appTop: 336px - $statusBarHeight;
+$appLeft: 130px;
+$appTop: 120px;
 
-$entLeft: 105px;
-$entTop: 228px - $statusBarHeight;
+$entLeft: 215px;
+$entTop: 90px;
 
-$comLeft: 330px;
-$comTop: 197px - $statusBarHeight;
+$comLeft: 270px;
+$comTop: 210px;
 
-$navLeft: 549px;
-$navTop: 228px - $statusBarHeight;
+$navLeft: 360px;
+$navTop: 80px;
 
-$setLeft: 721px;
-$setTop: 336 - $statusBarHeight;
-
+$setLeft: 480px;
+$setTop: 110px;
 
 // Glow width and height
 $glowWidth: 363px;
@@ -73,8 +72,8 @@ $glowHeight: 323px;
 $glowBottomOffset: 30px;
 
 // Width and height of the two smaller outside coins.
-$coinAWidth: 114px;
-$coinAHeight: 122px;
+$coinAWidth: 120px;
+$coinAHeight: 120px;
 
 // Translation to apply to the two smaller outside coins.
 $coinAFocusTranslateX: 36px;
@@ -104,8 +103,8 @@ $coinBFocusTranslateY: -10px;
   100% {
     // A-coins are smaller than B-coins so the scale is larger to get the same end size
     -o-transform: scale(5.0, 5.0); 
-    left: $comLeft + ($coinBWidth - $coinAWidth) / 2;
-    top: $comTop + ($coinBHeight - $coinAHeight) / 2;
+    //left: $comLeft + ($coinBWidth - $coinAWidth) / 2;
+    //top: $comTop + ($coinBHeight - $coinAHeight) / 2;
     z-index: 1;
   }
 }
@@ -122,8 +121,8 @@ $coinBFocusTranslateY: -10px;
   }
   100% {
     -o-transform: scale(4.0, 4.0);
-    left: $comLeft;
-    top: $comTop;
+    //left: $comLeft;
+    //top: $comTop;
     z-index: 1;
   }
 }
@@ -152,13 +151,13 @@ $coinBFocusTranslateY: -10px;
 .MainMenuCtrlAppDiv {
   position: absolute;
   left: $appLeft;
-  top: $appTop;
+  top: $appTop - $statusMargin;
   width: $coinAWidth;
   height: $coinAHeight;
   -o-transition: 0.2s linear;
 }
 
-.MainMenuCtrlAppNormal {
+/*.MainMenuCtrlAppNormal {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -167,25 +166,23 @@ $coinBFocusTranslateY: -10px;
   background: url(../images/coins/HomeApps.png);
   background-repeat: no-repeat;
   -o-transition: opacity 0.2s linear; 
-}
+}*/
 
 .MainMenuCtrlAppFocus {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: $coinAWidth;
-  height: $coinAHeight;
+  left: 19px - $appLeft;
+  top: 70px - $appTop;
+  width: 434px;
+  height: 224px;
   background: url(../images/coins/HomeApps_Focus.png);
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-.MainMenuCtrlAppDiv.MainMenuCtrlCoinFocus {
-  -o-transform: scale(1.2, 1.2) translate($coinAFocusTranslateX, $coinAFocusTranslateY);
-}
-
-div.MainMenuCtrlCoinFocus .MainMenuCtrlAppNormal {
   opacity: 0;
+  -o-transition: opacity 0.2s linear;
+}
+
+div.MainMenuCtrlCoinFocus .MainMenuCtrlAppFocus {
+  opacity: 1;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -194,40 +191,38 @@ div.MainMenuCtrlCoinFocus .MainMenuCtrlAppNormal {
 .MainMenuCtrlEntDiv {
   position: absolute;
   left: $entLeft;
-  top: $entTop;
-  width: $coinBWidth;
-  height: $coinBHeight;
+  top: $entTop - $statusMargin;
+  width: $coinAWidth;
+  height: $coinAHeight;
   -o-transition: 0.2s linear;
 }
 
-.MainMenuCtrlEntNormal {
+/*.MainMenuCtrlEntNormal {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: $coinBWidth;
-  height: $coinBHeight;
+  width: $coinAWidth;
+  height: $coinAHeight;
   background: url(../images/coins/HomeAudio.png);
   background-repeat: no-repeat;
   -o-transition: opacity 0.2s linear; 
-}
+}*/
 
 .MainMenuCtrlEntFocus {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: $coinBWidth;
-  height: $coinBHeight;
+  left: 37px - $entLeft;
+  top: 58px - $entTop;
+  width: 503px;
+  height: 202px;
   background: url(../images/coins/HomeAudio_Focus.png);
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-.MainMenuCtrlEntDiv.MainMenuCtrlCoinFocus {
-  -o-transform: scale(1.2, 1.2) translate($coinBFocusTranslateX, $coinBFocusTranslateY);
-}
-
-div.MainMenuCtrlCoinFocus .MainMenuCtrlEntNormal {
   opacity: 0;
+  -o-transition: opacity 0.2s linear;
+}
+
+div.MainMenuCtrlCoinFocus .MainMenuCtrlEntFocus {
+  opacity: 1;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -236,13 +231,13 @@ div.MainMenuCtrlCoinFocus .MainMenuCtrlEntNormal {
 .MainMenuCtrlComDiv {
   position: absolute;
   left: $comLeft;
-  top: $comTop;
+  top: $comTop - $statusMargin;
   width: $coinBWidth;
   height: $coinBHeight;
   -o-transition: 0.2s linear;
 }
 
-.MainMenuCtrlComNormal {
+/*.MainMenuCtrlComNormal {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -251,25 +246,23 @@ div.MainMenuCtrlCoinFocus .MainMenuCtrlEntNormal {
   background: url(../images/coins/HomeCom.png);
   background-repeat: no-repeat;
   -o-transition: opacity 0.2s linear; 
-}
+}*/
 
 .MainMenuCtrlComFocus {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: $coinBWidth;
-  height: $coinBHeight;
+  left: 27px - $comLeft;
+  top: 123px - $comTop;
+  width: 631px;
+  height: 307px;
   background: url(../images/coins/HomeCom_Focus.png);
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-.MainMenuCtrlComDiv.MainMenuCtrlCoinFocus {
-  -o-transform: scale(1.2, 1.2) translate($coinBFocusTranslateX, $coinBFocusTranslateY);
-}
-
-div.MainMenuCtrlCoinFocus .MainMenuCtrlComNormal {
   opacity: 0;
+  -o-transition: opacity 0.2s linear;
+}
+
+div.MainMenuCtrlCoinFocus .MainMenuCtrlComFocus {
+  opacity: 1;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -278,40 +271,38 @@ div.MainMenuCtrlCoinFocus .MainMenuCtrlComNormal {
 .MainMenuCtrlNavDiv {
   position: absolute;
   left: $navLeft;
-  top: $navTop;
-  width: $coinBWidth;
-  height: $coinBHeight;
+  top: $navTop - $statusMargin;
+  width: $coinAWidth;
+  height: $coinAHeight;
   -o-transition: 0.2s linear;
 }
 
-.MainMenuCtrlNavNormal {
+/*.MainMenuCtrlNavNormal {
   position: absolute;
   left: 0px;
   top: 0px;
-  width: $coinBWidth;
-  height: $coinBHeight;
+  width: $coinAWidth;
+  height: $coinAHeight;
   background: url(../images/coins/HomeNav.png);
   background-repeat: no-repeat;
   -o-transition: opacity 0.2s linear; 
-}
+}*/
 
 .MainMenuCtrlNavFocus {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: $coinBWidth;
-  height: $coinBHeight;
+  left: 165px - $navLeft;
+  top: 43px - $navTop;
+  width: 532px;
+  height: 225px;
   background: url(../images/coins/HomeNav_Focus.png);
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-.MainMenuCtrlNavDiv.MainMenuCtrlCoinFocus {
-  -o-transform: scale(1.2, 1.2) translate($coinBFocusTranslateX, $coinBFocusTranslateY);
-}
-
-div.MainMenuCtrlCoinFocus .MainMenuCtrlNavNormal {
   opacity: 0;
+  -o-transition: opacity 0.2s linear;
+}
+
+div.MainMenuCtrlCoinFocus .MainMenuCtrlNavFocus {
+  opacity: 1;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -320,13 +311,13 @@ div.MainMenuCtrlCoinFocus .MainMenuCtrlNavNormal {
 .MainMenuCtrlSetDiv {
   position: absolute;
   left: $setLeft;
-  top: $setTop;
+  top: $setTop - $statusMargin;
   width: $coinAWidth;
   height: $coinAHeight;
   -o-transition: 0.2s linear;
 }
 
-.MainMenuCtrlSetNormal {
+/*.MainMenuCtrlSetNormal {
   position: absolute;
   left: 0px;
   top: 0px;
@@ -335,30 +326,28 @@ div.MainMenuCtrlCoinFocus .MainMenuCtrlNavNormal {
   background: url(../images/coins/HomeSet.png);
   background-repeat: no-repeat;
   -o-transition: opacity 0.2s linear; 
-}
+}*/
 
 .MainMenuCtrlSetFocus {
   position: absolute;
-  left: 0px;
-  top: 0px;
-  width: $coinAWidth;
-  height: $coinAHeight;
+  left: 294px - $setLeft;
+  top: 84px - $setTop;
+  width: 491px;
+  height: 182px;
   background: url(../images/coins/HomeSet_Focus.png);
   background-repeat: no-repeat;
   background-size: 100%;
-}
-
-.MainMenuCtrlSetDiv.MainMenuCtrlCoinFocus {
-  -o-transform: scale(1.2, 1.2) translate(-$coinAFocusTranslateX, $coinAFocusTranslateY);
-}
-
-div.MainMenuCtrlCoinFocus .MainMenuCtrlSetNormal {
   opacity: 0;
+  -o-transition: opacity 0.2s linear;
+}
+
+div.MainMenuCtrlCoinFocus .MainMenuCtrlSetFocus {
+  opacity: 1;
 }
 
 ///////////////////////////////////////////////////////////////////////////////
 // Glow styles
-
+/*
 @mixin highlightCommon {
   opacity: 0;
   -o-transition: opacity 200ms linear;
@@ -402,3 +391,4 @@ div.MainMenuCtrlCoinFocus .MainMenuCtrlSetNormal {
   left: $setLeft + $coinAWidth / 2 - $coinAFocusTranslateX - $glowWidth / 2;
   top: $setTop + $coinAFocusTranslateY + $coinAHeight - $glowHeight + $glowBottomOffset;
 }
+*/
